@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		  <meta charset="UTF-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		      <title>Animated Baby Cartoon</title>
+		        <style>
+    body {
+	          background: linear-gradient(to top, #aee1f9, #ffffff);
+		        height: 100vh;
+			      margin: 0;
+			            display: flex;
+				          justify-content: center;
+					        align-items: center;
+						      overflow: hidden;
+						          }
+
+        .baby {
+		      position: relative;
+		            width: 150px;
+			          height: 200px;
+				        animation: float 3s ease-in-out infinite;
+					    }
+
+	    /* Head */
+	    .head {
+		          width: 100px;
+			        height: 100px;
+				      background: #ffe0bd;
+				            border-radius: 50%;
+					          position: absolute;
+						        top: 0;
+							      left: 25px;
+							            box-shadow: inset -5px -5px 0 rgba(0,0,0,0.1);
+								        }
+
+	        /* Eyes */
+	        .eye {
+			      width: 15px;
+			            height: 15px;
+				          background: #333;
+					        border-radius: 50%;
+						      position: absolute;
+						            top: 35px;
+							          animation: blink 3s infinite;
+								      }
+		    .eye.left { left: 30px; }
+		        .eye.right { right: 30px; }
+
+			    /* Mouth */
+			    .mouth {
+				          width: 40px;
+					        height: 20px;
+						      border-radius: 0 0 50% 50%;
+						            background: #ff8080;
+							          position: absolute;
+								        bottom: 20px;
+									      left: 30px;
+									          }
+
+			        /* Body */
+			        .body {
+					      width: 120px;
+					            height: 100px;
+						          background: #ffb6c1;
+							        border-radius: 60px 60px 30px 30px;
+								      position: absolute;
+								            bottom: 0;
+									          left: 15px;
+										      }
+
+				    @keyframes blink {
+					          0%, 90%, 100% { transform: scaleY(1); }
+						        95% { transform: scaleY(0.1); }
+							    }
+
+				        @keyframes float {
+						      0%, 100% { transform: translateY(0); }
+						            50% { transform: translateY(-20px); }
+							        }
+					  </style>
+	</head>
+	<body>
+		  <div class="baby">
+			      <div class="head">
+				            <div class="eye left"></div>
+					          <div class="eye right"></div>
+						        <div class="mouth"></div>
+							    </div>
+							        <div class="body"></div>
+								  </div>
+	</body>
+</html>
+
