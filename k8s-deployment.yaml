@@ -17,15 +17,19 @@ spec:
         image: chandanunix001/my-webapp:latest
         ports:
         - containerPort: 80
----
+    ---
+# Service
 apiVersion: v1
 kind: Service
 metadata:
   name: my-webapp-service
 spec:
-  type: LoadBalancer
+  type: LoadBalancer    # or NodePort if using Minikube
   selector:
-    app: my-webapp
+    app: my-webapp      # matches Deployment pod labels
   ports:
-  - port: 80
-    targetPort: 80
+  - port: 80            # Service port
+    targetPort: 80      # Pod container port
+    
+
+    
