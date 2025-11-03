@@ -24,7 +24,7 @@ kind: Service
 metadata:
   name: my-webapp-service
 spec:
-  type: LoadBalancer    # or NodePort if using Minikube
+  type: NodePort    # or NodePort if using Minikube
   selector:
     app: my-webapp      # matches Deployment pod labels
   ports:
